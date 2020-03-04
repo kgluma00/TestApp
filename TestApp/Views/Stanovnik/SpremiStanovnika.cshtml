@@ -1,0 +1,45 @@
+﻿@model TestApp.Models.Stanovnik
+
+@{
+    ViewData["Title"] = "SpremiStanovnika";
+}
+
+<h1>SpremiStanovnika</h1>
+
+<h4>Stanovnik</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SpremiStanovnika">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ImeStanovnika" class="control-label"></label>
+                <input asp-for="ImeStanovnika" class="form-control" />
+                <span asp-validation-for="ImeStanovnika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PrezimeStanovnika" class="control-label"></label>
+                <input asp-for="PrezimeStanovnika" class="form-control" />
+                <span asp-validation-for="PrezimeStanovnika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UlicaStanovnika" class="control-label"></label>
+                <input asp-for="UlicaStanovnika" class="form-control" />
+                <span asp-validation-for="UlicaStanovnika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatumRodenja" class="control-label"></label>
+                <input asp-for="DatumRodenja" class="form-control" />
+                <span asp-validation-for="DatumRodenja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

@@ -22,5 +22,6 @@ namespace TestApp.Models
         public double ProracunGrada { get; set; }
         [Required]
         public string Drzava { get; set; }
+        public ICollection<Stanovnik> Stanovnici { get; set; }
     }
 }

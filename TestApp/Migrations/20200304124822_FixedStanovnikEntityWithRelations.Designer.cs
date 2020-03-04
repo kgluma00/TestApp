@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TestApp.Data;
 
 namespace TestApp.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    partial class ApplicationContextModelSnapshot : ModelSnapshot
+    [Migration("20200304124822_FixedStanovnikEntityWithRelations")]
+    partial class FixedStanovnikEntityWithRelations
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,7 +63,7 @@ namespace TestApp.Migrations
                     b.Property<DateTime>("DatumRodenja")
                         .HasColumnType("Date");
 
-                    b.Property<int>("GradId")
+                    b.Property<int?>("GradId")
                         .HasColumnType("int");
 
                     b.Property<string>("ImeStanovnika")
@@ -86,9 +88,7 @@ namespace TestApp.Migrations
                 {
                     b.HasOne("TestApp.Models.Grad", "Grad")
                         .WithMany("Stanovnici")
-                        .HasForeignKey("GradId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("GradId");
                 });
 #pragma warning restore 612, 618
         }

@@ -10,5 +10,6 @@ namespace TestApp.Data
         }
 
         public DbSet<Grad> Grads { get; set; }
+        public DbSet<Stanovnik> Stanovniks { get; set; }
     }
 }
