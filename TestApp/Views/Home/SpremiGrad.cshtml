@@ -1,0 +1,55 @@
+﻿@model TestApp.Models.Grad
+
+@{
+    ViewData["Title"] = "SpremiGrad";
+}
+
+<h1>SpremiGrad</h1>
+
+<h4>Grad</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SpremiGrad">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ImeGrada" class="control-label"></label>
+                <input asp-for="ImeGrada" class="form-control" />
+                <span asp-validation-for="ImeGrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrojStanovnika" class="control-label"></label>
+                <input asp-for="BrojStanovnika" class="form-control" />
+                <span asp-validation-for="BrojStanovnika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImeGradonacelnika" class="control-label"></label>
+                <input asp-for="ImeGradonacelnika" class="form-control" />
+                <span asp-validation-for="ImeGradonacelnika" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BrojSkola" class="control-label"></label>
+                <input asp-for="BrojSkola" class="form-control" />
+                <span asp-validation-for="BrojSkola" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProracunGrada" class="control-label"></label>
+                <input asp-for="ProracunGrada" class="form-control" />
+                <span asp-validation-for="ProracunGrada" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Drzava" class="control-label"></label>
+                <input asp-for="Drzava" class="form-control" />
+                <span asp-validation-for="Drzava" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

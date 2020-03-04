@@ -1,0 +1,54 @@
+﻿@model TestApp.Models.Grad
+
+@{
+    ViewData["Title"] = "PrikaziGrad";
+}
+
+<h1>PrikaziGrad</h1>
+
+<div>
+    <h4>Grad</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ImeGrada)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImeGrada)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BrojStanovnika)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrojStanovnika)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ImeGradonacelnika)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ImeGradonacelnika)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.BrojSkola)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.BrojSkola)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ProracunGrada)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ProracunGrada)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Drzava)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Drzava)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

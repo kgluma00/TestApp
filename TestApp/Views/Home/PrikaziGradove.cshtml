@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TestApp.Models.Grad>
+
+@{
+    ViewData["Title"] = "PrikaziGradove";
+}
+
+<h1>PrikaziGradove</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ImeGrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrojStanovnika)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImeGradonacelnika)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BrojSkola)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProracunGrada)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Drzava)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImeGrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojStanovnika)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ImeGradonacelnika)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrojSkola)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProracunGrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Drzava)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
